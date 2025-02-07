@@ -1,6 +1,5 @@
 import os
-
-import random
+import secrets
 
 
 class Discrete:
@@ -11,7 +10,7 @@ class Discrete:
         self.n = num_actions
 
     def sample(self):
-        return random.randint(0, self.n - 1)
+        return secrets.SystemRandom().randint(0, self.n - 1)
 
 
 class Environment:
